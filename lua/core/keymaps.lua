@@ -1,10 +1,18 @@
---map mouse scroll to move cursor up and down
-vim.keymap.set('n', '<ScrollWheelUp>', '<Up>')
-vim.keymap.set('n', '<ScrollWheelDown>', '<Down>')
+vim.opt.mouse = 'a'
 
---Adds yanked value to clipboard
-vim.opt.clipboard = 'unnamed'
+local function map(mode, lhs, rhs, opts)
+  local options = {noremap = true, silent = true}
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
 
--- 1 tab == 2 spaces
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
+-- Map the scroll wheel to up and down keys
+map('', '<ScrollWheelUp>', '<Up>', {silent = false})
+map('', '<ScrollWheelDown>', '<Down>', {silent = false})
+
+-- <leader> = `\` key
+
+ 
+vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
