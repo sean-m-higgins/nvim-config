@@ -36,8 +36,14 @@ local plugins = {
   'simrat39/rust-tools.nvim',
 
   ---- completion
-  'hrsh7th/nvim-cmp',
-  'hrsh7th/cmp-nvim-lsp',
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-vsnip" },
+      { "hrsh7th/vim-vsnip" },
+    }
+  },
   'L3MON4D3/LuaSnip',
   'saadparwaiz1/cmp_luasnip',
   "rafamadriz/friendly-snippets",
@@ -46,6 +52,10 @@ local plugins = {
   "neovim/nvim-lspconfig",
   "williamboman/mason-lspconfig.nvim",
   "glepnir/lspsaga.nvim",
+  {
+    'scalameta/nvim-metals',
+    dependencies = { {'nvim-lua/plenary.nvim'} }
+  },
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
