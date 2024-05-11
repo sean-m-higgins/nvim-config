@@ -1,15 +1,5 @@
-vim.opt.mouse = 'a'
-
-local function map(mode, lhs, rhs, opts)
-  local options = {noremap = true, silent = true}  -- TODO what are these options?
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-
--- Map the scroll wheel to up and down keys
-map('', '<ScrollWheelUp>', '<Up>', {silent = false})
-map('', '<ScrollWheelDown>', '<Down>', {silent = false})
-
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')   -- TODO am i using this?
+vim.opt.mouse = 'a'  -- Enables use of mouse, 'a' for all modes: normal, visual, insert, command-line
+vim.keymap.set('', '<ScrollWheelUp>', '<Up>')  -- Enables use of scroll wheel on mouse to move cursor up instead of window
+vim.keymap.set('', '<ScrollWheelDown>', '<Down>')  -- Enables use of scroll wheel on mouse to move cursor down instead of window
+-- vim.g.mapleader = ' ' 
+-- vim.g.maplocalleader = ' '
