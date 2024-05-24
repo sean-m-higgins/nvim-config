@@ -40,23 +40,23 @@ local plugins = {
 
   --[[========== Completion ==========]]
   --"github/copilot.vim",
-  -- {
-  --   "nvimdev/lspsaga.nvim",  -- improve neovim lsp experience, https://nvimdev.github.io/lspsaga/
-  --   dependencies = {
-  --     "nvim-treesitter/nvim-treesitter",
-  --     "nvim-tree/nvim-web-devicons"
-  --   }
-  -- },
-  -- {
-  --   "VonHeikemen/lsp-zero.nvim",
-  --   branch = "v3.x"
-  -- },
-  -- "neovim/nvim-lspconfig",  -- Quickstart configs for Nvim LSP
-  -- "hrsh7th/cmp-nvim-lsp",
-  -- "hrsh7th/nvim-cmp",  -- A completion plugin for neovim coded in Lua
-  -- "L3MON4D3/LuaSnip",  -- snippet Engine for Neovim
-  -- "williamboman/mason.nvim",  -- Portable package manager for Neovim, LSP
-  -- "williamboman/mason-lspconfig.nvim",  -- Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+  {
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v3.x"
+  },
+  "neovim/nvim-lspconfig",  -- Quickstart configs for Nvim LSP
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/nvim-cmp",  -- A completion plugin for neovim coded in Lua
+  "L3MON4D3/LuaSnip",  -- snippet Engine for Neovim
+  "williamboman/mason.nvim",  -- Portable package manager for Neovim, LSP
+  "williamboman/mason-lspconfig.nvim",  -- Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+  {
+    "nvimdev/lspsaga.nvim",  -- improve neovim lsp experience, https://nvimdev.github.io/lspsaga/
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    }
+  },
   -- {
   --   "scalameta/nvim-metals",
   --   dependencies = { {"nvim-lua/plenary.nvim"} }
