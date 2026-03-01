@@ -1,1 +1,8 @@
 plugin/
+.DS_Store
+spell/
+
+# Swap, backup, and undo files
+*.swp
+*.swo
+*~
